@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  fair-simulation:
+    build: .
+    container_name: fair-monte-carlo
+    volumes:
+      # Mount current directory for input files
+      - .:/app/input:ro
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+    restart: "no"  # Run once and exit
+    
+  # Example: Run with simple scenarios
+  fair-simple:
+    build: .
+    container_name: fair-simple
+    volumes:
+      - .:/app/input:ro
+    command: ["input/simple-scenarios.json"]
+    restart: "no"
+    
+  # Example: Run with custom parameters
+  fair-custom:
+    build: .
+    container_name: fair-custom
+    command: ["Custom Scenario", "0.5", "1.0", "2.0", "0.3", "0.6", "0.9", "5000"]
+    restart: "no"

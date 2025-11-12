@@ -1,0 +1,20 @@
+{
+  "DefaultIterations": 5000,
+  "Scenarios": [
+    {
+      "Name": "Low Risk",
+      "ThreatEventFrequency": { "Min": 0.1, "Mode": 0.2, "Max": 0.5 },
+      "VulnerabilityProbability": { "Min": 0.1, "Mode": 0.3, "Max": 0.6 }
+    },
+    {
+      "Name": "Medium Risk", 
+      "ThreatEventFrequency": { "Min": 0.3, "Mode": 0.6, "Max": 1.2 },
+      "VulnerabilityProbability": { "Min": 0.2, "Mode": 0.5, "Max": 0.8 }
+    },
+    {
+      "Name": "High Risk",
+      "ThreatEventFrequency": { "Min": 1.0, "Mode": 2.0, "Max": 4.0 },
+      "VulnerabilityProbability": { "Min": 0.5, "Mode": 0.7, "Max": 0.9 }
+    }
+  ]
+}

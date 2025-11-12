@@ -1,0 +1,70 @@
+{
+  "DefaultIterations": 10000,
+  "Scenarios": [
+    {
+      "Name": "Ransomware Attack",
+      "Description": "High-frequency ransomware targeting email systems",
+      "ThreatEventFrequency": {
+        "Min": 0.8,
+        "Mode": 1.5,
+        "Max": 3.0,
+        "Type": "Triangular"
+      },
+      "VulnerabilityProbability": {
+        "Min": 0.4,
+        "Mode": 0.7,
+        "Max": 0.9,
+        "Type": "Triangular"
+      },
+      "Iterations": 15000
+    },
+    {
+      "Name": "Insider Threat",
+      "Description": "Malicious insider with privileged access",
+      "ThreatEventFrequency": {
+        "Min": 0.05,
+        "Mode": 0.2,
+        "Max": 0.8,
+        "Type": "Triangular"
+      },
+      "VulnerabilityProbability": {
+        "Min": 0.6,
+        "Mode": 0.8,
+        "Max": 0.95,
+        "Type": "Triangular"
+      }
+    },
+    {
+      "Name": "Supply Chain Attack",
+      "Description": "Third-party vendor compromise",
+      "ThreatEventFrequency": {
+        "Min": 0.1,
+        "Mode": 0.3,
+        "Max": 1.0,
+        "Type": "Triangular"
+      },
+      "VulnerabilityProbability": {
+        "Min": 0.2,
+        "Mode": 0.5,
+        "Max": 0.8,
+        "Type": "Triangular"
+      }
+    },
+    {
+      "Name": "Phishing Campaign",
+      "Description": "Targeted spear-phishing attacks",
+      "ThreatEventFrequency": {
+        "Min": 2.0,
+        "Mode": 4.0,
+        "Max": 8.0,
+        "Type": "Triangular"
+      },
+      "VulnerabilityProbability": {
+        "Min": 0.1,
+        "Mode": 0.25,
+        "Max": 0.5,
+        "Type": "Triangular"
+      }
+    }
+  ]
+}
