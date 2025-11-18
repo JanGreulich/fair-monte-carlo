@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.IO;
 
 namespace FairMonteCarlo
@@ -43,7 +44,9 @@ namespace FairMonteCarlo
             {
                 // Load from JSON file
                 var jsonContent = File.ReadAllText(args[0]);
-                var collection = JsonSerializer.Deserialize<ScenarioCollection>(jsonContent);
+                var options = new JsonSerializerOptions();
+                options.Converters.Add(new JsonStringEnumConverter());
+                var collection = JsonSerializer.Deserialize<ScenarioCollection>(jsonContent, options);
                 return collection?.Scenarios ?? new List<ScenarioInput>();
             }
             else if (args.Length >= 6)
