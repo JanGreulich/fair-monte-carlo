@@ -17,4 +17,4 @@ RUN dotnet publish -c Release -o out --no-restore
 ENV DOTNET_ENVIRONMENT=Production
 
 # Set the entry point
-ENTRYPOINT ["dotnet", "out/FairMonteCarlo.dll"]
+ENTRYPOINT ["dotnet", "/app/out/FairMonteCarlo.dll"]
